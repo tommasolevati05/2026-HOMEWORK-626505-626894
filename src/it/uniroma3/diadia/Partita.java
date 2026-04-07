@@ -1,0 +1,98 @@
+package it.uniroma3.diadia;
+
+import it.uniroma3.diadia.ambienti.Labirinto;
+import it.uniroma3.diadia.ambienti.Stanza;
+import it.uniroma3.diadia.giocatore.Giocatore;
+
+/**
+ * Questa classe modella una partita del gioco
+ *
+ * @author  docente di POO
+ * @see Stanza
+ * @version base
+ */
+
+public class Partita {
+
+	private Labirinto labirinto;
+	private Stanza stanzaCorrente;
+	private boolean finita;
+	private Giocatore giocatore;
+	
+	/** crea una partita, ad ogni partita è associato il labirinto.
+	 * 
+	 */
+	public Partita(){
+		this.labirinto=new Labirinto();
+		this.giocatore=new Giocatore();
+		this.stanzaCorrente=this.labirinto.getStanzaDiIngresso();
+		this.finita = false;
+	}
+
+
+	/**
+	 * Restituisce vero se e solo se la partita e' stata vinta
+	 * @return vero se partita vinta
+	 */
+	public boolean vinta() {
+		return this.stanzaCorrente== this.labirinto.getStanzaVincente();
+	}
+	
+	
+	public void setStanzaCorrente(Stanza stanzaCorrente) {
+		this.stanzaCorrente = stanzaCorrente;
+	}
+
+	public Stanza getStanzaCorrente() {
+		return this.stanzaCorrente;
+	}
+	
+
+	/**
+	 * Restituisce vero se e solo se la partita e' finita
+	 * @return vero se partita finita
+	 */
+	public boolean isFinita() {
+		return finita || vinta() || (this.giocatore.getCfu() == 0);
+	}
+
+	/**
+	 * Imposta la partita come finita
+	 *
+	 */
+	public void setFinita() {
+		this.finita = true;
+	}
+	
+
+	/**restituisce lo stato della partita
+	 * 
+	 * @return lo stato della partita
+	 */
+	public String getStatoPartita() {
+		return this.toString();
+	}
+	
+	 /**
+		* Restituisce una rappresentazione stringa di questa partita,
+		* stampadone la descrizione della stanza corrente e i cfu rimanenti. 
+		* @return la rappresentazione stringa
+		*/
+	public String toString() {
+		StringBuilder s = new StringBuilder();
+		s.append("Stato della partita:\n");
+		s.append("Cfu rimanenti: " + this.giocatore.getCfu() + "\n");
+		s.append(this.stanzaCorrente.toString());
+		return s.toString();
+		
+	}
+	
+	public Labirinto getLabirinto() {
+		return this.labirinto;
+	}
+	public Giocatore getGiocatore() {
+		return this.giocatore;
+	}
+	
+
+}
