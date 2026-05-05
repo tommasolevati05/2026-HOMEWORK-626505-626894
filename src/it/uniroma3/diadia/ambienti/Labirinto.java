@@ -26,19 +26,24 @@ public class Labirinto {
 	private void init() {
 		/* crea stanze del labirinto */
 		Stanza atrio = new Stanza("Atrio");
-		Stanza aulaN11 = new Stanza("Aula N11");
-		Stanza aulaN10 = new Stanza("Aula N10");
-		Stanza laboratorio = new Stanza("Laboratorio Campus");
+		Stanza aulaN11 = new StanzaBloccata("Aula N11","est", "chiave");
+		Stanza aulaN10 = new StanzaBuia("Aula N10","lanterna");
+		Stanza laboratorio = new StanzaMagica("Laboratorio Campus");
 		Stanza biblioteca = new Stanza("Biblioteca");
 		
 		/* crea gli attrezzi */
 		Attrezzo lanterna = new Attrezzo("lanterna",3);
 		Attrezzo osso = new Attrezzo("osso",1);
+		Attrezzo spada = new Attrezzo("spada",5);
+		Attrezzo chiave = new Attrezzo("chiave",1);
 		
 			
 		/* pone gli attrezzi nelle stanze */
-		aulaN10.addAttrezzo(lanterna);
+		aulaN10.addAttrezzo(spada);
 		atrio.addAttrezzo(osso);
+		laboratorio.addAttrezzo(chiave);
+		aulaN11.addAttrezzo(lanterna);
+		
 		
 		
 		/* collega le stanze */

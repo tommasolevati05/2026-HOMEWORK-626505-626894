@@ -94,5 +94,11 @@ public class Partita {
 		return this.giocatore;
 	}
 	
+	public boolean giocatoreIsVivo() {
+		if(this.giocatore.getCfu()>0) {
+			return true;
+		}
+		return false;
+	}
 
 }
