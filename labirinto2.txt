@@ -1,0 +1,6 @@
+Stanze: Atrio, N10-buia-torcia, AulaCampus, Biblioteca
+Inizio: Atrio
+Vincente: Biblioteca
+Attrezzi: torcia 2 Atrio, libro 3 AulaCampus
+Uscite: Atrio nord N10 N10 ovest AulaCampus AulaCampus sud Biblioteca
+Personaggi: Mago Merlino N10 Benvenuto!, Cane Rex Atrio Bau!

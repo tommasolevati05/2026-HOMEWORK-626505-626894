@@ -1,0 +1,6 @@
+Stanze: Atrio, LabCampusOne, Biblioteca
+Inizio: Atrio
+Vincente: Biblioteca
+Attrezzi: libro 2 Atrio, osso 1 LabCampusOne
+Uscite: Atrio nord LabCampusOne LabCampusOne ovest Biblioteca
+Personaggi: Cane Fido LabCampusOne Abbaia!

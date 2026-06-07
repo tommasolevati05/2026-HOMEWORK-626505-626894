@@ -1,0 +1,6 @@
+Stanze: Atrio, N10, N11-bloccata-nord-chiave, AulaCampus-magica, Biblioteca
+Inizio: Atrio
+Vincente: Biblioteca
+Attrezzi: chiave 1 Atrio, libro 2 N10, osso 1 AulaCampus
+Uscite: Atrio nord N10 N10 est N11 N10 ovest AulaCampus AulaCampus nord Biblioteca
+Personaggi: Strega Malefica N11 Attenta!, Mago Merlino AulaCampus Sorpresa!, Cane Rex Atrio Bau!
